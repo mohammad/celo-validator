@@ -1,5 +1,6 @@
 provider "google" {
-  project = "Celo"
+  project = "celo-303002"
+  credentials = "./credentials/Celo-85fd921ccb33.json"
   region  = "us-central1"
   zone    = "us-central1-c"
 }
