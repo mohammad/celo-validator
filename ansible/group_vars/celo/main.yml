@@ -1,0 +1,5 @@
+---
+ansible_ssh_private_key_file: ../credentials/ansible
+remote_user: ansible
+ansible_python_interpreter: /usr/bin/python3
+backup: bak.bos.example.com

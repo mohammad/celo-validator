@@ -1,2 +1,3 @@
 credentials/
 local.sh
+terraform.tfstate

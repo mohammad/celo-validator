@@ -1,0 +1,25 @@
+---
+# This Playbook pulls and kicks off a Celo Full Node
+- hosts: all
+  become: true
+  vars_files:
+    - ../vars/default.yml
+  remote_user: "{{ remote_user }}"
+
+  tasks:
+    - name: Pull Celo Image
+      environment:
+        CELO_IMAGE: "{{ celo_container_url }}"
+      docker_image:
+        name: "{{ celo_container_url }}"
+        source: pull
+
+    - name: Creates Celo block chain data directory
+      file:
+        path: /celo-data-dir
+        state: directory
+
+    - name: Create an account
+      file:
+        path: /celo-data-dir
+        state: directory
